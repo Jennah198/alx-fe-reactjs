@@ -8,19 +8,23 @@ import WelcomeMessage from './components/WelcomeMessage';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
+import UserProfile from './components/UserProfile'; // Import UserProfile
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Header />  {/* Displays the header */}
-      
+      <Header />
+
       <div>
-        <WelcomeMessage />  {/* Displays the welcome message */}
+        <WelcomeMessage />
       </div>
 
-      <MainContent />  {/* Displays the main content */}
+      <MainContent />
+
+      {/* User Profile Section */}
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
 
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -46,7 +50,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <Footer />  {/* Displays the footer */}
+      <Footer />
     </>
   );
 }
