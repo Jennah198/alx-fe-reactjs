@@ -1,39 +1,32 @@
-import { create } from 'zustand';
+import create from 'zustand';
 
 const useRecipeStore = create((set) => ({
-  recipes: [],  // Store all recipes
-  searchTerm: '',  // Store the search term entered by the user
-  setSearchTerm: (term) => set({ searchTerm: term }),  // Action to update the search term
-  filteredRecipes: [],  // Store filtered recipes based on search term
+  recipes: [],
+  favorites: [],
 
-  // Action to filter recipes based on the search term
-  filterRecipes: () =>
+  // Add a recipe to favorites
+  addFavorite: (recipeId) =>
     set((state) => ({
-      filteredRecipes: state.recipes.filter((recipe) =>
-        recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase()) ||  // Filter by title
-        recipe.ingredients.some((ingredient) =>
-          ingredient.toLowerCase().includes(state.searchTerm.toLowerCase())  // Optional: Filter by ingredients
-        )
-      ),
+      favorites: [...state.favorites, recipeId],
     })),
 
-  // Add recipe to the list
-  addRecipe: (newRecipe) =>
-    set((state) => ({ recipes: [...state.recipes, newRecipe] })),
-
-  // Update an existing recipe
-  updateRecipe: (updatedRecipe) =>
+  // Remove a recipe from favorites
+  removeFavorite: (recipeId) =>
     set((state) => ({
-      recipes: state.recipes.map((recipe) =>
-        recipe.id === updatedRecipe.id ? updatedRecipe : recipe
-      ),
+      favorites: state.favorites.filter((id) => id !== recipeId),
     })),
 
-  // Delete a recipe by id
-  deleteRecipe: (recipeId) =>
-    set((state) => ({
-      recipes: state.recipes.filter((recipe) => recipe.id !== recipeId),
-    })),
+  recommendations: [],
+
+  // Generate personalized recommendations based on favorites
+  generateRecommendations: () =>
+    set((state) => {
+      // Mock recommendation logic based on favorites
+      const recommended = state.recipes.filter((recipe) =>
+        state.favorites.includes(recipe.id)
+      );
+      return { recommendations: recommended };
+    }),
 }));
 
 export default useRecipeStore;
