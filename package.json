@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "recipe-sharing-app",
+=======
+  "name": "form-handling-react",
+>>>>>>> 9173e27 (feat: Implement user registration form with controlled components and Formik)
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +14,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zustand": "^5.0.3"
+=======
+    "formik": "^2.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "yup": "^1.6.1"
+>>>>>>> 9173e27 (feat: Implement user registration form with controlled components and Formik)
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
