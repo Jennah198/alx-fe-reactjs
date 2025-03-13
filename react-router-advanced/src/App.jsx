@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Profile from './pages/Profile';
-import ProfileDetails from './pages/ProfileDetails';
-import ProfileSettings from './pages/ProfileSettings';
-import Post from './pages/Post';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Profile from './components/pages/Profile';
+import ProfileDetails from './components/pages/ProfileDetails';
+import ProfileSettings from './components/pages/ProfileSettings';
+import Post from './components/pages/Post';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
