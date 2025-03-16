@@ -6,7 +6,7 @@ const UserProfile = () => {
         <img
           src="https://via.placeholder.com/150" // Replace with your image URL
           alt="Profile"
-          className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full border-4 border-blue-500"
+          className="w-24 h-24 sm:w-24 sm:h-24 md:w-36 md:h-36 rounded-full border-4 border-blue-500"
         />
       </div>
 
