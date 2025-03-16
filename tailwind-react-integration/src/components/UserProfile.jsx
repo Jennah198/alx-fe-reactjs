@@ -1,10 +1,10 @@
 const UserProfile = () => {
   return (
-    <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto p-4 sm:p-6 md:p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto p-4 sm:p-4 md:p-8 bg-white shadow-lg rounded-lg">
       {/* Profile Image */}
       <div className="flex justify-center">
         <img
-          src="https://via.placeholder.com/150" 
+          src="https://via.placeholder.com/150" // Replace with your image URL
           alt="Profile"
           className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full border-4 border-blue-500"
         />
