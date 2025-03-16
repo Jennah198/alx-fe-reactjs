@@ -1,6 +1,6 @@
 const UserProfile = () => {
   return (
-    <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto p-4 sm:p-4 md:p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-lg mx-auto p-4 sm:p-4 md:p-8 bg-white shadow-lg rounded-lg">
       {/* Profile Image */}
       <div className="flex justify-center">
         <img
