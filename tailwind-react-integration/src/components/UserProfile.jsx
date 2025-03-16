@@ -11,7 +11,7 @@ const UserProfile = () => {
       </div>
 
       {/* Profile Heading */}
-      <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-center mt-4">
+      <h1 className="text-lg sm:text-xl md:text-xl font-bold text-center mt-4">
         John Doe
       </h1>
 
