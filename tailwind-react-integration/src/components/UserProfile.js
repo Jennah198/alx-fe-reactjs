@@ -1,19 +1,44 @@
-import React from 'react';
-
-function UserProfile() {
+const UserProfile = () => {
   return (
-    <div className="bg-gray-100 p-4 sm:p-8 max-w-xs sm:max-w-sm mx-auto my-20 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <img
-        src="https://via.placeholder.com/150"
-        alt="User"
-        className="rounded-full w-24 h-24 sm:w-36 sm:h-36 mx-auto hover:scale-110 transition-transform duration-300 ease-in-out"
-      />
-      <h1 className="text-lg sm:text-xl text-blue-800 my-4 hover:text-blue-500 transition-colors duration-300 ease-in-out">John Doe</h1>
-      <p className="text-sm sm:text-base text-gray-600">
-        Developer at Example Co. Loves to write code and explore new technologies.
+    <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto p-4 sm:p-6 md:p-8 bg-white shadow-lg rounded-lg">
+      {/* Profile Image */}
+      <div className="flex justify-center">
+        <img
+          src="https://via.placeholder.com/150" 
+          alt="Profile"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full border-4 border-blue-500"
+        />
+      </div>
+
+      {/* Profile Heading */}
+      <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-center mt-4">
+        John Doe
+      </h1>
+
+      {/* Profile Description */}
+      <p className="text-sm sm:text-base md:text-lg text-gray-600 text-center mt-2">
+        Frontend Developer | Passionate about building user-friendly interfaces.
       </p>
+
+      {/* Additional Info */}
+      <div className="mt-6 text-center">
+        <p className="text-sm sm:text-base text-gray-500">
+          Follow me on:
+        </p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <a href="#" className="text-blue-500 hover:text-blue-700">
+            Twitter
+          </a>
+          <a href="#" className="text-blue-500 hover:text-blue-700">
+            LinkedIn
+          </a>
+          <a href="#" className="text-blue-500 hover:text-blue-700">
+            GitHub
+          </a>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default UserProfile;
